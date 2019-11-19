@@ -5,3 +5,5 @@ STUDY OR CHECK
 
 ![](E:\TodayIL\TodayIL\IMG\Residual based boosting.PNG)
 
+![IMG/weightbasedboosting2.PNG]()
+
