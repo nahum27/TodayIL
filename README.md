@@ -5,5 +5,6 @@ STUDY OR CHECK
 
 ![](E:\TodayIL\TodayIL\IMG\Residual based boosting.PNG)
 
-![https://github.com/nahum27/TodayIL/blob/master/IMG/weightbasedboosting.PNG?raw=true]()
 
+
+![test](https://user-images.githubusercontent.com/30791788/69163400-786e0280-0b31-11ea-9502-c82cbe5b79e1.PNG)
