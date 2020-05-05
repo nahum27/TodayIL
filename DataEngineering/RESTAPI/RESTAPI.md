@@ -49,3 +49,37 @@ headers = {"Authorization": "Basic {}".format(encoded)}
 - `authorization Server`(권한 서버)는 `client`(클라이언트)가 성공적으로 access token을 발급받은 이후에 `resource owner`(자원 소유자)를 인증하고 `obtaining authorization`(권한 부여)를 합니다.
 
 ![OAuth](https://user-images.githubusercontent.com/30791788/81042331-dbd6cb80-8eea-11ea-9ec9-b04b13437615.png)
+
+
+
+
+
+##### END POINT
+
+> Resource를 엑세스하는 경로/방법
+>
+> Resource는 API를 통해 리턴된 정보 하나의 Resource 안에 여러개의 Endpoints가 존재 
+
+- post /campaigns
+- GET /campaigns
+- GET /campaigns/{campaign_id}
+- PATCH /campaigns/{campaign_id}
+- DELETE /campaigns/{campaign_id}
+- POST /campaigns/{campaign_id}/actions/cancel-send
+- POST /campaigns/{campaign_id}/actions/pause
+
+
+
+###### Method 
+
+> 자원 접근에 허용된 행위 (GET, POST, PUT, DELETE)
+
+- GET /campaigns/{campaign_id}/actions/send
+
+
+
+
+
+##### Parameters
+
+> Endpoint를 통해
