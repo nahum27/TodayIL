@@ -37,6 +37,69 @@
 
 
 
-- Spotify api 에게 토큰 발행
+#### *. Have your application request authorization*
 
-`
+The request is sent to the `/api/token` endpoint of the Accounts service:
+
+```
+POST https://accounts.spotify.com/api/token
+```
+
+The body of this POST request must contain the following parameters encoded in `application/x-www-form-urlencoded` as defined in the OAuth 2.0 specification:
+
+| REQUEST BODY PARAMETER | VALUE                                       |
+| :--------------------- | :------------------------------------------ |
+| grant_type             | *Required.* Set it to `client_credentials`. |
+
+The header of this POST request must contain the following parameter:
+
+| HEADER PARAMETER | VALUE                                                        |
+| :--------------- | :----------------------------------------------------------- |
+| Authorization    | *Required.* Base 64 encoded string that contains the client ID and client secret key. The field must have the format: Authorization: `Basic `  <base64 encoded client_id:client_secret> |
+
+
+
+## Response Status Codes
+
+Web API uses the following response status codes, as defined in the [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 6585](https://www.ietf.org/rfc/rfc6585.txt):
+
+| STATUS CODE | DESCRIPTION                                                  |
+| :---------- | :----------------------------------------------------------- |
+| 200         | OK - The request has succeeded. The client can read the result of the request in the body and the headers of the response. |
+| 201         | Created - The request has been fulfilled and resulted in a new resource being created. |
+| 202         | Accepted - The request has been accepted for processing, but the processing has not been completed. |
+| 204         | No Content - The request has succeeded but returns no message body. |
+| 304         | Not Modified. See [Conditional requests](https://developer.spotify.com/documentation/web-api/#conditional-requests). |
+| 400         | Bad Request - The request could not be understood by the server due to malformed syntax. The message body will contain more information; see [Response Schema](https://developer.spotify.com/documentation/web-api/#response-schema). |
+| 401         | Unauthorized - The request requires user authentication or, if the request included authorization credentials, authorization has been refused for those credentials. |
+| 403         | Forbidden - The server understood the request, but is refusing to fulfill it. |
+| 404         | Not Found - The requested resource could not be found. This error can be due to a temporary or permanent condition. |
+| 429         | Too Many Requests - [Rate limiting](https://developer.spotify.com/documentation/web-api/#rate-limiting) has been applied. |
+| 500         | Internal Server Error. You should never receive this error because our clever coders catch them all … but if you are unlucky enough to get one, please report it to us through a comment at the bottom of this page. |
+| 502         | Bad Gateway - The server was acting as a gateway or proxy and received an invalid response from the upstream server. |
+| 503         | Service Unavailable - The server is currently unable to handle the request due to a temporary condition which will be alleviated after some delay. You can choose to resend the request again. |
+
+
+
+## Rate Limiting
+
+Rate Limiting enables Web API to share access bandwidth to its resources equally across all users.
+
+Rate limiting is applied as per application based on Client ID, and regardless of the number of users who use the application simultaneously.
+
+To reduce the amount of requests, use endpoints that fetch multiple entities in one request. For example: If you often request single tracks, albums, or artists, use endpoints such as [Get Several Tracks](https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-tracks/), [Get Several Albums](https://developer.spotify.com/documentation/web-api/reference/albums/get-several-albums/) or [Get Several Artists](https://developer.spotify.com/documentation/web-api/reference/artists/get-several-artists/), instead.
+
+**Note:** If Web API returns **status code 429**, it means that you have sent too many requests. When this happens, check the `Retry-After` header, where you will see a number display
+
+
+
+
+
+
+
+
+
+
+
+
+
