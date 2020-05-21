@@ -1,5 +1,9 @@
 # TodayIL
-STUDY OR CHECK
+공부하고 기록하는 공간
+
 ## DataEngineering
----
-#### AWS ###
+#### AWS ####
+#### PYTHON ####
+#### RESTAPI ####
+#### SPOTIFY ####
+#### SQL ####
