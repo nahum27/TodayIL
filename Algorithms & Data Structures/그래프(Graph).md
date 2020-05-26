@@ -4,7 +4,7 @@
 
 ---
 
-<div style="text-align: left;"><img style="max-height:30%; max-width:35%; " src="https://www.fun-coding.org/00_Images/graph.png"></div>
+<div style="text-align: left;"><img style="max-height:20%; max-width:25%; " src="https://www.fun-coding.org/00_Images/graph.png"></div>
 
 
 
