@@ -58,9 +58,56 @@
 
 
 
+## Primary Key & Unique Key 
 
 
 
+##### Unique Key
+
+```mermaid
+classDiagram
+      class artists{
+          +id
+          +name
+          +Followers
+          +Popularity
+          +URL      
+          }
+          
+```
+
+- id Unique
+- Not Null
+
+
+
+##### Foreign Key
+
+- Can contain more than one
+- Null values OK
+
+
+
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+
+
+
+
+|parameter | primary key | unique Key |
+
+|---|---|---|
+
+|Basic|us |iniquely|
+
+|---|---|---|
+
+|null|can|cann acc|
 
 
 
